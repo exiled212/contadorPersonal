@@ -19,9 +19,23 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+          "./assets/libs/bootstrap/css/bootstrap.min.css"
+        , "./assets/libs/font-awesome/css/font-awesome.min.css"
+        , "./assets/libs/datatables/dataTables.bootstrap4.css"
+        , "./assets/main/css/sb-admin.min.css"
+        , "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+          "./assets/libs/jquery/jquery.min.js"
+        , "./assets/libs/popper/popper.min.js"
+        , "./assets/libs/bootstrap/js/bootstrap.min.js"
+        , "./assets/libs/jquery-easing/jquery.easing.min.js"
+        , "./assets/libs/chart.js/Chart.min.js"
+        , "./assets/libs/datatables/jquery.dataTables.js"
+        , "./assets/libs/datatables/dataTables.bootstrap4.js"
+        , "./assets/main/js/sb-admin.min.js"
+        , "./assets/main/js/sb-admin-datatables.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
