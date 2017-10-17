@@ -8,7 +8,13 @@ import { SummaryComponent } from './modules/account/summary/summary.component';
 
 // Main Routes
 import { MAIN_ROUTES } from './app.routes';
+
+// Services
+import { UserService } from './modules/security/services/user.service';
+
+
 import { LoginComponent } from './modules/security/login/login.component';
+import { CreateUserComponent } from './modules/security/create-user/create-user.component';
 
 
 @NgModule({
@@ -17,13 +23,16 @@ import { LoginComponent } from './modules/security/login/login.component';
     NavbarComponent,
     ContentComponent,
     SummaryComponent,
-    LoginComponent
+    LoginComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     MAIN_ROUTES
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

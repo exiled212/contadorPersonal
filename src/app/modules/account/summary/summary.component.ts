@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService, UserInterface } from '../../security/services/user.service';
+
 
 @Component({
   selector: 'app-summary',
@@ -6,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  user: UserInterface;
+  money: number;
+
+  constructor(private _User: UserService) { }
 
   ngOnInit() {
+    this.user = this._User.get();
+    this.money = this.user.money;
+  }
+
+  selectPay(value: number) {
+    this.money = this.user.money / value;
+  }
+
+  test(value: number) {
+    this.money = value;
   }
 
 }

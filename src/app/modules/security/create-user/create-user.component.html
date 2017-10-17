@@ -1,0 +1,35 @@
+<div class="card card-register mx-auto mt-5">
+  <div class="card-header">Crear Usuario</div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="exampleInputName">Nombre Completo</label>
+            <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Correo Electronico</label>
+        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+          </div>
+          <div class="col-md-6">
+            <label for="exampleConfirmPassword">Confirmar password</label>
+            <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-success btn-block" >Registrar</a>
+    </form>
+    <div class="text-center">
+      <a class="btn btn-info btn-block" [routerLink]="['/login']">Login</a>
+    </div>
+  </div>
+</div>

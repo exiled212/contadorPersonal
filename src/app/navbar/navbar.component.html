@@ -8,6 +8,18 @@
   
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['account', 'summary']">
+          <i class="fa fa-fw fa-dashboard"></i>
+          <span class="nav-link-text"> Resumen</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['registrer']">
+          <i class="fa fa-fw fa-dashboard"></i>
+          <span class="nav-link-text"> Crear Usuario</span>
+        </a>
+      </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
           <i class="fa fa-fw fa-sitemap"></i>
@@ -68,7 +80,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" data-dismiss="modal" [routerLink]="['login']">Logout</a>
         </div>
       </div>
     </div>

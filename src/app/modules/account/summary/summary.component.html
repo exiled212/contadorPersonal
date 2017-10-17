@@ -2,18 +2,23 @@
   <div class="col col-md-6">
     <div class="card mb-12">
       <div class="card-header">
-        <i class="fa fa-pie-chart"></i> Resumen de Gastos e Ingresos
+        <i class="fa fa-pie-chart"></i> Resumen de Gastos e Ingresos de {{user.name}}
       </div>
       <div class="card-body">
         <div class="row">
           <div class="col">
-            <select name="" id="" class="form-control">
-              <option value=""></option>
+            <select #element (change)="test(element.value)" class="form-control" >
+              <option value="{{user.money/1}}" >Sueldo Mensual</option>
+              <option value="{{user.money/2}}" >Sueldo quincenal</option>
+              <option value="{{user.money/4}}" >Sueldo Semanal</option>
+              <option value="{{user.money/25}}">Sueldo Diario</option>
             </select>
           </div>
         </div>
       </div>
-      <div class="card-footer small text-muted"></div>
+      <div class="card-footer small text-muted">
+        <input value="{{money}} $ COL" type="text" class="form-control" disabled >
+      </div>
     </div>
   </div>
 </div>
