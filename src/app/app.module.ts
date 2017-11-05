@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -28,6 +31,8 @@ import { CreateUserComponent } from './modules/security/create-user/create-user.
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     MAIN_ROUTES
   ],
   providers: [

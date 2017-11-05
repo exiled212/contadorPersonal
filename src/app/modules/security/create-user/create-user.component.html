@@ -1,35 +1,33 @@
 <div class="card card-register mx-auto mt-5">
-  <div class="card-header">Crear Usuario</div>
-  <div class="card-body">
-    <form>
-      <div class="form-group">
-        <div class="form-row">
-          <div class="col-md-12">
-            <label for="exampleInputName">Nombre Completo</label>
-            <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Correo Electronico</label>
-        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <div class="form-row">
-          <div class="col-md-6">
-            <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
-          </div>
-          <div class="col-md-6">
-            <label for="exampleConfirmPassword">Confirmar password</label>
-            <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
-          </div>
-        </div>
-      </div>
-      <a class="btn btn-success btn-block" >Registrar</a>
-    </form>
-    <div class="text-center">
-      <a class="btn btn-info btn-block" [routerLink]="['/login']">Login</a>
+    <div class="card-header">Crear Usuario</div>
+    <div class="card-body">
+        <form (submit)="create($event);">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <label>Nombre Completo</label>
+                        <input [(ngModel)]="user.name" name="name" class="form-control" type="text" aria-describedby="nameHelp" placeholder="Nombre Completo">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Correo Electronico</label>
+                <input [(ngModel)]="user.email" name="email" class="form-control" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label>Password</label>
+                        <input [(ngModel)]="user.password" name="password" class="form-control" type="password" placeholder="Contraseña">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Confirmar password</label>
+                        <input [(ngModel)]="user.passwordR" name="passwordR" class="form-control" type="password" placeholder="Repite Contraseña">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-block" >Registrar</button>
+            <button type="button" class="btn btn-info btn-block" [routerLink]="['/login']">Login</button>
+        </form>
     </div>
-  </div>
 </div>

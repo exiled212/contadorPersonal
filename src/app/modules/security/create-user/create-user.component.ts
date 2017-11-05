@@ -4,16 +4,18 @@ import { UserService } from '../services/user.service';
 
 
 @Component({
-  selector: 'app-create-user',
-  templateUrl: './create-user.component.html'
+	selector: "app-create-user",
+	templateUrl: "./create-user.component.html"
 })
 export class CreateUserComponent implements OnInit {
+	user: any = {};
 
-  user: object = {};
+	constructor(private _User: UserService) {}
 
-  constructor( private _User: UserService ) { }
+	ngOnInit() {}
 
-  ngOnInit() {
-  }
-
+	create(event) {
+		this._User.create( this.user )
+		event.preventDefault();
+	}
 }
